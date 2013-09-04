@@ -1,0 +1,45 @@
+.. _annotated_file:
+
+::
+
+    Chr             STRING  chr1
+    Start           INT     866319
+    Stop            INT     866319
+    Ref_allele      STRING  G
+    Alt_allele      STRING  A
+    Ensemble_GeneID ENSG00000187634;
+    HGNC_symbol SAMD11
+    HGNC_approved_name sterile alpha motif domain containing 11;
+    HGNC_Synonyms MGC45873;
+    OMIM_gene_description -;
+    OMIM_morbid_description -;
+    HGMD -
+    Gene_annotation intronic
+    Functional_annotation -
+    HGNC:Transcript_ID:Exon:cDNA_change:AA_change -
+    phastConsElements -
+    gerp++elem -
+    genomicSuperDups -
+    Pseudogene -;
+    1000G 0.96
+    dbsnp129 0.0508744038155803
+    dbsnp132 0.0508744038155803
+    dbsnp137NonFlagged snp137NonFlagged
+    dbsnp137_Id rs9988021
+    Esp6500 -
+    SIFT_Whole-exome -
+    PolyPhen_version_2_HumDiv_Whole-exome -
+    MutationTaster_Whole-exome -
+    GERP++_Whole-exome -
+    LRT_Whole-exome -
+    PhyloP_Whole-exome -
+    Main_Location_HPASubCL(120821) Nucleus but not nucleoli;Vesicles;
+    Other_location_HPASubCL(120821) -;
+    Expression_type_HPASubCL(120821) Staining;
+    Reliability_HPASubCL(120821) Uncertain;
+    Gwas_catalog -
+    Tfbs_transfac_Matrix_Database_(v7.0) -
+    snoRNA_&_miRNA_annotations -
+    IDN_GT_Call 52-1-4A:FILTER=PASS:GT=1/1:AD=0,30:GQ=90:PL=999,90,0
+    IDN_GT_Call 52-2-1U:FILTER=PASS:GT=1/1:AD=0,25:GQ=75:PL=886,75,0
+    IDN_GT_Call 52-2-2U:FILTER=PASS:GT=1/1:AD=0,30:GQ=90:PL=1051,90,0

@@ -5,11 +5,18 @@
 
 Welcome to MIP_api's documentation!
 ===================================
+Release |version|.
+
+`MIP <https://github.com/henrikstranneheim/MIP>`_ is a pipeline for clinical analysis of whole exome and whole genome data.
+Here will follow a documentation of the different file formats, and also maybe the steps of the pipeline.
+
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
+   
+   annotated_file
 
 
 
