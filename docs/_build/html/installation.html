@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to MIP_api’s documentation! &mdash; MIP_api 1.0 documentation</title>
+    <title>Installation &mdash; MIP_api 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="MIP_api 1.0 documentation" href="#" />
-    <link rel="next" title="Annotated File" href="annotated_file.html" />
+    <link rel="top" title="MIP_api 1.0 documentation" href="index.html" />
+    <link rel="next" title="Setup" href="setup.html" />
+    <link rel="prev" title="Annotated File" href="annotated_file.html" />
    
   
   <script src="//use.edgefonts.net/cardo.js"></script>
@@ -39,9 +40,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="annotated_file.html" title="Annotated File"
+          <a href="setup.html" title="Setup"
              accesskey="N">next</a> |</li>
-        <li><a href="#">MIP_api 1.0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="annotated_file.html" title="Annotated File"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">MIP_api 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,34 +54,23 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-mip-api-s-documentation">
-<h1>Welcome to MIP_api&#8217;s documentation!<a class="headerlink" href="#welcome-to-mip-api-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Release 1.0.</p>
-<p><a class="reference external" href="https://github.com/henrikstranneheim/MIP">MIP</a> is a pipeline for clinical analysis of whole exome and whole genome data.
-Here will follow a documentation of the different file formats, and also maybe the steps of the pipeline.</p>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="annotated_file.html">Annotated File</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#moving-files-from-inbox">Moving files from INBOX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="adding-new-programs.html">Adding a new program</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="adding-new-programs.html#program-prerequisites">Program prerequisites</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>On UNIX, install Perl5 by following these <a class="reference external" href="http://learn.perl.org/installing/unix_linux.html">instructions</a>. It uses <a class="reference external" href="http://perlbrew.pl/">Perlbrew</a>.</li>
+<li>To switch to the new Perl installation, you might need to run</li>
+</ol>
+<div class="highlight-python"><pre>INSTALLER_PERL_VERSION=5.16.0
+perlbrew switch perl-$INSTALLER_PERL_VERSION</pre>
 </div>
+<ol class="arabic simple" start="3">
+<li>To install the dependencies you can now run (<tt class="docutils literal"><span class="pre">cpanm</span> <span class="pre">Module::Name</span></tt>)</li>
+</ol>
+<div class="highlight-python"><pre>cpanm YAML</pre>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
+<ol class="arabic simple" start="4">
+<li>You need to make sure all depedencies are installed and loaded. The most obscure program is: <a class="reference external" href="https://github.com/CosteaPaul/qaTools">qaTools</a>. Start by downloading <cite>samtools</cite> v.0.1.18. qaTools needs this to build. Therefore you need to edit the <cite>Makefile</cite> in the qaTools directory to point to the <cite>samtools`directory before running ``make`</cite>.</li>
+</ol>
 </div>
 
 
@@ -85,23 +78,16 @@ Here will follow a documentation of the different file formats, and also maybe t
         </div>
       </div>
       <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to MIP_api&#8217;s documentation!</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-<h3>Related Topics</h3>
+        <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="annotated_file.html" title="next chapter">Annotated File</a></li>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="annotated_file.html" title="previous chapter">Annotated File</a></li>
+      <li>Next: <a href="setup.html" title="next chapter">Setup</a></li>
   </ul></li>
 </ul>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
+    <li><a href="_sources/installation.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">

@@ -4,7 +4,6 @@
 *.so
 
 # Local data
-
 data/
 .DS_Store
 

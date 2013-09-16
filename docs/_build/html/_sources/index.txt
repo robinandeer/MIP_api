@@ -17,6 +17,9 @@ Contents:
    :maxdepth: 2
    
    annotated_file
+   installation
+   setup
+   adding-new-programs
 
 
 
