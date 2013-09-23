@@ -74,7 +74,7 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Main_Location_HPASubCL(120821)                    | Nucleus but not nucleoli;Vesicles;                                        |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Other_location_HPASubCL(120821)                   |Nucleoli;Endoplasmic reticulum;                                                                         |
+|Other_location_HPASubCL(120821)                   |Nucleoli;Endoplasmic reticulum;                                            |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Expression_type_HPASubCL(120821)                  |Staining;                                                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
@@ -84,7 +84,7 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Tfbs_transfac_Matrix_Database_(v7.0)              |Score=833;Name=V$HMX1_01                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|snoRNA_&_miRNA_annotations                        |-                                                                          |
+|snoRNA_&_miRNA_annotations                        |Name=hsa-mir-3199-1,hsa-mir-3199-2                                         |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |IDN_GT_Call                                       | 52-1-4A:FILTER=PASS:GT=1/1:AD=0,30:GQ=90:PL=999,90,0                      |
 +--------------------------------------------------+---------------------------------------------------------------------------+
@@ -123,7 +123,7 @@ Longer description:
 |HGNC_Synonyms      |  STRING   |<Descriptive string>        |Other symbols used to refer to this gene.                                   |
 |                   |           |','-separated ends with ';' |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Omim gene          |  STRING   |<Descriptive string>        |Short description from the `OMIM`_(Online Mendelian Inheritance In Man)     |
+|Omim gene          |  STRING   |<Descriptive string>        |Short description from the `OMIM`_ (Online Mendelian Inheritance In Man)    |
 |descriptions       |           |';'-separated               |database.                                                                   |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Omim morbid        |  STRING   |<Descriptive string>        |Keywords for search in the  `OMIM`_ morbid map.                             |
@@ -192,27 +192,27 @@ Longer description:
 |LRT_Whole-exome    | FLOAT     |<Float, 0-1> OR -           |`LRT`_ Using a comparative genomics data set of 32 vertebrate species we    |
 |                   |           |                            | show that a likelihood ratio test (LRT) can accurately identify a subset of|
 |                   |           |                            | deleterious mutations that disrupt highly conserved amino acids within     |
-|                   |           |                            |protein-coding sequences.                                                   |
+|                   |           |                            | protein-coding sequences.                                                  |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |PhyloP_Whole-exome | FLOAT     |<Float, 0-1 > OR -          |`Phylop`_ is another score for conservation.                                |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Main_Location_     | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|Main_Location      | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
 |HPASubCL(120821)   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Other_Location     | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
 |HPASubCL(120821)   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Expression_type_   | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|Expression_type    | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
 |HPASubCL(120821)   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Reliability_       | String    |';'-separated string        |Estimation of the `HPA`_ prediction                                         |
+|Reliability        | String    |';'-separated string        |Estimation of the `HPA`_ prediction                                         |
 |HPASubCL(120821)   |           |[Very low, Low, Medium, ...]|                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Gwas_catalog       | String    |Name=<Phenotype> OR -       |Describes associated phenotype from the `gwas` catalog, if existing.        |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Tfbs_transfac_     | String    |Score=<INT>;Name=<Str> OR - |Description from the `Transfac`_ (Transcription Factor Binding Sites)       |
+|Tfbs_transfac      | String    |Score=<INT>;Name=<Str> OR - |Description from the `Transfac`_ (Transcription Factor Binding Sites)       |
 |Matrix_Database    |           |                            |database.                                                                   |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |snoRNA_&_miRNA_    | String    |Name=<Str> OR -             |Annotation for RNA:s                                                        |
