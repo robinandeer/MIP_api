@@ -58,31 +58,31 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |dbsnp137_Id                                       |rs9988021                                                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Esp6500                                           |-                                                                          |
+|Esp6500                                           |0.001692                                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|SIFT_Whole-exome                                  |-                                                                          |
+|SIFT_Whole-exome                                  |0.04                                                                       |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|PolyPhen_version_2_HumDiv_Whole-exome             |-                                                                          |
+|PolyPhen_version_2_HumDiv_Whole-exome             |0.991                                                                      |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|MutationTaster_Whole-exome                        |-                                                                          |
+|MutationTaster_Whole-exome                        |0.781453                                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|GERP++_Whole-exome                                |-                                                                          |
+|GERP++_Whole-exome                                |5.38                                                                       |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|LRT_Whole-exome                                   |-                                                                          |
+|LRT_Whole-exome                                   |0.991773                                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|PhyloP_Whole-exome                                |-                                                                          |
+|PhyloP_Whole-exome                                |0.998688                                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Main_Location_HPASubCL(120821)                    | Nucleus but not nucleoli;Vesicles;                                        |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Other_location_HPASubCL(120821)                   |-;                                                                         |
+|Other_location_HPASubCL(120821)                   |Nucleoli;Endoplasmic reticulum;                                                                         |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Expression_type_HPASubCL(120821)                  |Staining;                                                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Reliability_HPASubCL(120821)                      |Uncertain;                                                                 |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Gwas_catalog                                      |-                                                                          |
+|Gwas_catalog                                      |Name=Crohn's disease                                                       |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Tfbs_transfac_Matrix_Database_(v7.0)              |-                                                                          |
+|Tfbs_transfac_Matrix_Database_(v7.0)              |Score=833;Name=V$HMX1_01                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |snoRNA_&_miRNA_annotations                        |-                                                                          |
 +--------------------------------------------------+---------------------------------------------------------------------------+
@@ -162,6 +162,65 @@ Longer description:
 |1000G              | FLOAT     |<Float> OR -                |Frequency in the `1000G`_ database                                          |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|dbsnp129           | FLOAT     |<Float> OR -                |Frequency in the `dbsnp`_ database, version 129. This version is considered |
+|                   |           |                            |to have smallest amount of false positives.                                 |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|dbsnp132           | FLOAT     |<Float> OR -                |Frequency in the `dbsnp`_ database, version 132. This is a later version.   |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|dbsnp137NonFlagged | STRING    |'snp137NonFlagged' OR -     |If the variant exists in the latest version of the `dbsnp`_ database.       |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|dbsnp137_Id        | STRING    |<dbsnp_id> OR -             |The variant id if it exists in the latest version of the `dbsnp`_ database. |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Esp6500            | FLOAT     |<Float> OR -                |Frequency in the `Esp6500`_ database. This is a database with exome data for|
+|                   |           |                            |thousands of individuals with heart, lung and blood disorders.              |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|SIFT_Whole_exome   | FLOAT     |<Float, 0-1 > OR -          |`SIFT`_ predicts whether an amino acid substitution affects protein function|
+|                   |           |                            |The closer to 0 the more effect on the protein.                             |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|PolyPhen_version_2 | FLOAT     |<Float, 0-1 > OR -          |`PolyPhen_2`_ predicts whether an amino acid substitution affects protein   |
+|HumDiv_Whole-exome |           |                            |structure and function. The closer to 1 the more effect on the protein.     |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|MutationTaster_    | FLOAT     |<Float, 0-1 > OR -          |`MutationTaster`_ predicts whether an amino acid substitution affects       |
+|Whole-exome        |           |                            | protein function. The closer to 1 the more effect on the protein.          |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|GERP++_       _    | FLOAT     |<Float, -∞<x<∞> OR -        |`GERP`_ identifies constrained elements in multiple alignments by           |
+|Whole-exome        |           |                            | quantifying substitution deficits.                                         |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|LRT_Whole-exome    | FLOAT     |<Float, 0-1> OR -           |`LRT`_ Using a comparative genomics data set of 32 vertebrate species we    |
+|                   |           |                            | show that a likelihood ratio test (LRT) can accurately identify a subset of|
+|                   |           |                            | deleterious mutations that disrupt highly conserved amino acids within     |
+|                   |           |                            |protein-coding sequences.                                                   |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|PhyloP_Whole-exome | FLOAT     |<Float, 0-1 > OR -          |`Phylop`_ is another score for conservation.                                |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Main_Location_     | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|HPASubCL(120821)   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Other_Location     | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|HPASubCL(120821)   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Expression_type_   | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|HPASubCL(120821)   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Reliability_       | String    |';'-separated string        |Estimation of the `HPA`_ prediction                                         |
+|HPASubCL(120821)   |           |[Very low, Low, Medium, ...]|                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Gwas_catalog       | String    |Name=<Phenotype> OR -       |Describes associated phenotype from the `gwas` catalog, if existing.        |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Tfbs_transfac_     | String    |Score=<INT>;Name=<Str> OR - |Description from the `Transfac`_ (Transcription Factor Binding Sites)       |
+|Matrix_Database    |           |                            |database.                                                                   |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|snoRNA_&_miRNA_    | String    |Name=<Str> OR -             |Annotation for RNA:s                                                        |
+|annotations        |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|IDN_GT_Call   _    | String    |':'-separated string        |Information of the genotype call.                                           |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 
 .. _HGNC: http://www.genenames.org/
 .. _OMIM: http://www.omim.org/
@@ -169,3 +228,13 @@ Longer description:
 .. _GERP: http://mendel.stanford.edu/sidowlab/downloads/gerp/index.html
 .. _SuperDups: http://varianttools.sourceforge.net/Annotation/GenomicSuperDups
 .. _1000G: http://www.1000genomes.org/
+.. _dbsnp: https://www.ncbi.nlm.nih.gov/projects/SNP/
+.. _Esp6500: http://evs.gs.washington.edu/EVS/
+.. _SIFT: http://sift.jcvi.org/
+.. _PolyPhen_2: http://genetics.bwh.harvard.edu/pph2/
+.. _MutationTaster: http://mutationtaster.org
+.. _LRT: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2752137/
+.. _PhyloP: http://bioinformatics.oxfordjournals.org/content/27/13/i266.full
+.. _HPA: http://www.proteinatlas.org/
+.. _gwas: http://www.genome.gov/gwastudies/
+.. _Transfac: http://www.biobase-international.com/product/transcription-factor-binding-sites
