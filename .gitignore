@@ -49,3 +49,7 @@ nosetests.xml
 #Textmate
 
 *.tmproj
+
+#Git specific
+
+commit_message.txt
