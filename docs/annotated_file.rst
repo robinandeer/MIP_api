@@ -96,8 +96,8 @@ Longer description:
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |   COLUMN_NAME     |     TYPE  |          VALUE             |     DESCRIPTION                                                            |
 +===================+===========+============================+============================================================================+
-|   Chr             |  STRING   | [chr1-chr22, chrx, chrY] or|Self-explanatory                                                            |
-|                   |           | [chr1-chr22, chrx, chrY]   |                                                                            |
+|   Chr             |  STRING   | [chr1-chr22, chrX, chrY] or|Self-explanatory                                                            |
+|                   |           | [1-22, X, Y]               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |   Start           |  INT      |    Positive Integer        |Self-explanatory                                                            |
 |                   |           |                            |                                                                            |
@@ -197,13 +197,13 @@ Longer description:
 |PhyloP_Whole-exome | FLOAT     |<Float, 0-1 > OR -          |`Phylop`_ is another score for conservation.                                |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Main_Location      | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|Main_Location      | String    |';'-separated string        |`HPA`_ gives information of the protein location                            |
 |HPASubCL(120821)   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Other_Location     | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|Other_Location     | String    |';'-separated string        |`HPA`_ gives information of the protein location                            |
 |HPASubCL(120821)   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Expression_type    | String    |';'-separated string        |`HPA`_ gives information ov the protein location                            |
+|Expression_type    | String    |';'-separated string        |`HPA`_ gives information of the protein location                            |
 |HPASubCL(120821)   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Reliability        | String    |';'-separated string        |Estimation of the `HPA`_ prediction                                         |
