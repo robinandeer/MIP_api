@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MIP_api's documentation!
+Welcome to the MIP documentation!
 ===================================
 Release |version|.
 
@@ -17,6 +17,9 @@ Contents:
    :maxdepth: 2
    
    annotated_file
+   installation
+   setup
+   adding-new-programs
 
 
 
