@@ -5,6 +5,7 @@
 
 # Local data
 
+docs/_build
 _build
 data/
 .DS_Store
