@@ -1,0 +1,12 @@
+COLUMN_NAME,TYPE,VALUE,DESCRIPTION
+Chr,STRING,"[chr1-chr22, chrx, chrY] or [chr1-chr22, chrx, chrY]",Self-explanatory
+Start,INT,Positive Integer,Self-explanatory
+Stop,INT,Positive Integer,Self-explanatory
+INT,Positive Integer,Self-explanatory,
+Reference Allele,STRING,"[-,A,C,G,T]",Self-explanatory
+Alternative Allele,STRING,"[-,A,C,G,T]+",Self-explanatory
+Ensembl Gene Id,STRING,ENSGNNNNNNNNNN;,String with the ID:s for the Ensembl genes that the variant is present in. ';'-separated
+HGNC_symbol,STRING,<Gene Name>,"String with the `HGNC`_ gene name(s). ','-separated"
+HGNC_approved name,STRING,<Descriptive string>,"String with the gene description from `HGNC`_. ','-separated ends with ';'"
+HGNC_Synonyms,STRING,<Descriptive string>,"Other symbols used to refer to this gene. ','-separated ends with ';'"
+Omim gene descriptions,STRING,<Descriptive string>,Other symbolsused to refer to this gene
