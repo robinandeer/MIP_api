@@ -8,7 +8,7 @@ Adding a new program
 3. Supply if-block checking if the program should run
 
    a. Print to MIPLOGG + STDOUT
-   b. For each family memeber call your subroutine with memberID + args.
+   b. For each family member call your subroutine with memberID + args.
 
 4. Add a subroutine that submits your program script.
 

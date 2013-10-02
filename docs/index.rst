@@ -16,10 +16,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   annotated_file
    installation
    setup
    adding-new-programs
+   intersectCollect
+   annotated_file
+   
 
 
 
