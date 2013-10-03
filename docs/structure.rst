@@ -3,11 +3,11 @@ Stucture
 
 mip.pl
 ---------------------------------------
-Central hub and likely the only script you as a user will ever interact
-directly with.
+Central hub and likely the only script users will ever interact directly with.
 
 .. code-block:: console
-
+  
+  echo "Running MIP on Uppmax, analyzing all samples in family 10"
   $ perl mip.pl -env_up 1 -f 10
 
 intersectCollect.pl
