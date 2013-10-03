@@ -8,13 +8,8 @@ You need to perform a series of tasks to properly add a program to MIP. An overv
 
 3. :ref:`if-block`
 
-<<<<<<< HEAD
-   a. Print to MIPLOGG + STDOUT
-   b. For each family member call your subroutine with memberID + args.
-=======
   a. Print program name to ``MIPLOGG`` and ``STDOUT``
   b. Call your custom subroutine (ses below) with relevant parameters
->>>>>>> feature/adding-programs
 
 4. :ref:`custom-sub`
 
