@@ -5,6 +5,7 @@
 
 # Local data
 
+docs/_build
 _build
 data/
 .DS_Store
@@ -49,3 +50,7 @@ nosetests.xml
 #Textmate
 
 *.tmproj
+
+#Git specific
+
+commit_message.txt
