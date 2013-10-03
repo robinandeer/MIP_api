@@ -10,23 +10,23 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |   COLUMN_NAME                                    |     Example value                                                         |
 +==================================================+===========================================================================+    
-|Chr                                               | chr1                                                                      |
+|Chromosome                                        | chr1                                                                      |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Start                                             | 866319                                                                    |
+|Variant_start                                     | 866319                                                                    |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Stop                                              | 866319                                                                    |
+|Variant_stop                                      | 866319                                                                    |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Ref_allele                                        | G                                                                         |
+|Reference_allele                                  | G                                                                         |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Alt_allele                                        | A                                                                         |
+|Alternative_allel                                 | A                                                                         |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|Ensemble_GeneID                                   | ENSG00000187634:ENSG0000023475                                            |
+|Ensemble_gene_id                                  | ENSG00000187634:ENSG0000023475                                            |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |HGNC_symbol                                       | SAMD11:SAMD14                                                             |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |HGNC_approved_name                                | ATP-binding cassette, sub-family A (ABC1), member 5                       |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|HGNC_Synonyms                                     | SAT2, ATA2, KIAA1382, SNAT2:-                                             |
+|HGNC_synonyms                                     | SAT2, ATA2, KIAA1382, SNAT2:-                                             |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |OMIM_gene_description                             |SPINAL MUSCULAR ATROPHY, DISTAL, X-LINKED 3: SMAX3:                        |
 +--------------------------------------------------+---------------------------------------------------------------------------+
@@ -42,7 +42,7 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Phast_cons_elements                               |Score=435:Name=lod=78                                                      |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|gerp_elem                                         |Name=781.5                                                                 |
+|GERP_elements                                     |Name=781.5                                                                 |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Genomic_super_dups                                |Score=0.963985;Name=chr2:99922855                                          |
 +--------------------------------------------------+---------------------------------------------------------------------------+
@@ -50,15 +50,17 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |1000G                                             |0.96                                                                       |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|dbsnp129                                          |0.0508744038155803                                                         |
+|Dbsnp129                                          |0.0508744038155803                                                         |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|dbsnp_freq                                        |0.0508744038155803                                                         |
+|Dbsnp_freq                                        |0.0508744038155803                                                         |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|dbsnp_clinical_flag                               |snp137NonFlagged                                                           |
+|Dbsnp_nonflagged                                  |snp137NonFlagged                                                           |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|dbsnp_Id                                          |rs9988021                                                                  |
+|Dbsnp_rs_nr                                       |rs9988021                                                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Esp6500                                           |0.001692                                                                   |
++--------------------------------------------------+---------------------------------------------------------------------------+
+|HBVDB                                             | 0.5234                                                                    |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |SIFT                                              |0.04                                                                       |
 +--------------------------------------------------+---------------------------------------------------------------------------+
@@ -84,31 +86,44 @@ Short description:
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Transfac                                          |Score=833;Name=V$HMX1_01                                                   |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|snoRNA_miRNA_annotations                          |Name=hsa-mir-3199-1,hsa-mir-3199-2                                         |
+|SnoRNA_miRNA_annotations                          |Name=hsa-mir-3199-1,hsa-mir-3199-2                                         |
++--------------------------------------------------+---------------------------------------------------------------------------+
+|GT_call_filter                                    | PASS                                                                      |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |IDN_52-1-4A                                       | 52-1-4A:GT=1/1:AD=0,30:GQ=90:PL=999,90,0                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |IDN_52-2-1U                                       | 52-2-1U:GT=0/1:AD=0,30:GQ=90:PL=999,90,0                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|GT_call_filter                                    | PASS                                                                      |
+|Inheritance_model                                 | AR_hom:AR_Compound:AD                                                     |
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|HBVDB                                             | 0.5234                                                                    |
+|Rank_score                                        | 25                                                                        |
++--------------------------------------------------+---------------------------------------------------------------------------+
+
+Clinical List Additional Entries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++--------------------------------------------------+---------------------------------------------------------------------------+
+|   COLUMN_NAME                                    |     Example value                                                         |
++==================================================+===========================================================================+
+|Disease_group                                     |Peroxisomal metabolism                                                     |                                          
++--------------------------------------------------+---------------------------------------------------------------------------+
+|DbIEM_genome_build                                |GRCh37.p8                                                                  |
++--------------------------------------------------+---------------------------------------------------------------------------+
+|Disease_gene_model                                |AR_hom:AR_Compound:AD:                                                     |
 +--------------------------------------------------+---------------------------------------------------------------------------+
                                                                                                                                
-
 Longer description:
 ------------------------------------------
 
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |   COLUMN_NAME     |     TYPE  |          VALUE             |     DESCRIPTION                                                            |
 +===================+===========+============================+============================================================================+
-|   Chr             |  STRING   | [chr1-chr22, chrX, chrY] or|Self-explanatory                                                            |
+| Chromosome        |  STRING   | [chr1-chr22, chrX, chrY] or|Self-explanatory                                                            |
 |                   |           | [1-22, X, Y]               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|   Start           |  INT      |    Positive Integer        |Self-explanatory                                                            |
+| Variant Start     |  INT      |    Positive Integer        |Self-explanatory                                                            |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|   Stop            |  INT      |    Positive Integer        |Self-explanatory                                                            |
+| Variant Stop      |  INT      |    Positive Integer        |Self-explanatory                                                            |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 | Reference         |  STRING   |    [-,A,C,G,T]             |Self-explanatory                                                            |
@@ -120,23 +135,23 @@ Longer description:
 | Ensembl           |  STRING   |ENSGNNNNNNNNN:ENSGNNNNNNNNN |String with the ID:s for the Ensembl genes that the variant is present in.  |
 | Gene Id           |           |':'-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HGNC_symbol        |  STRING   |<Gene Name>                 |String with the `HGNC`_ gene name(s).                                       |
+|HGNC Symbol        |  STRING   |<Gene Name>                 |String with the `HGNC`_ gene name(s).                                       |
 |                   |           |':'-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HGNC_approved      |  STRING   |<Descriptive string>        |String with the gene description from `HGNC`_.                              |
-|name               |           |','-separated               |                                                                            |
+|HGNC Approved      |  STRING   |<Descriptive string>        |String with the gene description from `HGNC`_.                              |
+|Name               |           |','-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HGNC_Synonyms      |  STRING   |<Descriptive string>        |Other symbols used to refer to this gene.                                   |
+|HGNC Synonyms      |  STRING   |<Descriptive string>        |Other symbols used to refer to this gene.                                   |
 |                   |           |':'-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Omim gene          |  STRING   |<Descriptive string>        |Short description from the `OMIM`_ (Online Mendelian Inheritance In Man)    |
-|descriptions       |           |':'-separated               |database.                                                                   |
+|OMIM Gene          |  STRING   |<Descriptive string>        |Short description from the `OMIM`_ (Online Mendelian Inheritance In Man)    |
+|Descriptions       |           |':'-separated               |database.                                                                   |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Omim morbid        |  STRING   |<Descriptive string>        |Keywords for search in the  `OMIM`_ morbid map.                             |
-|descriptions       |           |':'-separated               |                                                                            |
+|OMIM Morbid        |  STRING   |<Descriptive string>        |Keywords for search in the  `OMIM`_ morbid map.                             |
+|Descriptions       |           |':'-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Omim morbid        |  STRING   |<Descriptive string>        |Information from the `HGMD`_ database.                                      |
-|descriptions       |           |':'-separated               |                                                                            |
+|OMIM Morbid        |  STRING   |<Descriptive string>        |Information from the `HGMD`_ database.                                      |
+|Descriptions       |           |':'-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Gene Annotation    |  STRING   |<Descriptive string>        |['exonic', 'exonic;splicing',  'splicing', 'intronic', 'UTR3', 'UTR5',      |
 |                   |           |';'-separated               |'UTR5;UTR3', 'upstream', 'downstream', 'upstream;downstream']               |
@@ -146,18 +161,18 @@ Longer description:
 |Annotation         |           |                            |'nonframeshift insertion','stopgain SNV','stoploss SNV','nonsynonymous SNV']|
 |                   |           |                            |Explains the effect of the variant                                          |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HGNC transcript    |  STRING   |<Descriptive string>        |Accurate description of variant location.                                   |
-|info               |           |':'-separated               |                                                                            |
+|HGNC Transcript    |  STRING   |<Descriptive string>        |Accurate description of variant location.                                   |
+|Info               |           |':'-separated               |                                                                            |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Phast_cons_elements|  STRING   |Score=NNN;Name=lod=NN OR '-'|Data of conserved regions of 64 species.                                    |
-|                   |           |':'-separated               |                                                                            |
+|Phast Cons         |  STRING   |Score=NNN;Name=lod=NN OR '-'|Data of conserved regions of 64 species.                                    |
+|Elements           |           |':'-separated               |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Gerp_elem          |  STRING   |Name=NNN.N                  |`GERP`_ : Genomic Evolutionary Rate Profiling                               |
+|GERP Elements      |  STRING   |Name=NNN.N                  |`GERP`_ : Genomic Evolutionary Rate Profiling                               |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Genomic_super_dups |  STRING   |Score=0.NNNN;               |`SuperDups`_ : Segmental Duplications                                       |
-|                   |           |Name=chrN:NNNNN             |                                                                            |
+|Genomic Super      |  STRING   |Score=0.NNNN;               |`SuperDups`_ : Segmental Duplications                                       |
+|Dups               |           |Name=chrN:NNNNN             |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Pseudogene         |  STRING   |<Descriptive string>        |[processed_pseudogene, deleted, unprocessed_pseudogene, IG_V_pseudogene,    |
 |                   |           |';'-separated               |TR_V_pseudogene, transcribed_processed_pseudogene, unitary_pseudogene]      |
@@ -165,20 +180,23 @@ Longer description:
 |1000G              | FLOAT     |<Float> OR -                |Frequency in the `1000G`_ database                                          |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|dbsnp129           | FLOAT     |<Float> OR -                |Frequency in the `dbsnp`_ database, version 129. This version is considered |
+|Dbsnp129           | FLOAT     |<Float> OR -                |Frequency in the `dbsnp`_ database, version 129. This version is considered |
 |                   |           |                            |to have smallest amount of false positives.                                 |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|dbsnp_frequency    | FLOAT     |<Float> OR -                |Frequency in the `dbsnp`_ database, Version specified in the header.        |
+|Dbsnp Frequency    | FLOAT     |<Float> OR -                |Frequency in the `dbsnp`_ database, Version specified in the header.        |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|dbsnp clinical flag| STRING    |'snp137NonFlagged' OR -     |If the variant has a clinical flag in the `dbsnp`_ database.                |
+|Dbsnp nonflagged   | STRING    |'snp137NonFlagged' OR -     |If the variant has a clinical flag in the `dbsnp`_ database.                |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|dbsnp_Id           | STRING    |<dbsnp_id> OR -             |The variant id if it exists in the latest version of the `dbsnp`_ database. |
+|Dbsnp_rs_nr        | STRING    |<dbsnp_rs_nr> OR -          |The variant id if it exists in the latest version of the `dbsnp`_ database. |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Esp6500            | FLOAT     |<Float> OR -                |Frequency in the `Esp6500`_ database. This is a database with exome data for|
 |                   |           |                            |thousands of individuals with heart, lung and blood disorders.              |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|HBVDB              | Float     |<Float>                     |Local variation database.                                                   |
+|                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |SIFT               | FLOAT     |<Float, 0-1 > OR -          |`SIFT`_ predicts whether an amino acid substitution affects protein function|
 |                   |           |                            |The closer to 0 the more effect on the protein.                             |
@@ -186,10 +204,10 @@ Longer description:
 |PolyPhen           | FLOAT     |<Float, 0-1 > OR -          |`PolyPhen_2`_ predicts whether an amino acid substitution affects protein   |
 |                   |           |                            |structure and function. The closer to 1 the more effect on the protein.     |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|MutationTaster_    | FLOAT     |<Float, 0-1 > OR -          |`MutationTaster`_ predicts whether an amino acid substitution affects       |
+|MutationTaster     | FLOAT     |<Float, 0-1 > OR -          |`MutationTaster`_ predicts whether an amino acid substitution affects       |
 |                   |           |                            | protein function. The closer to 1 the more effect on the protein.          |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|GERP  _       _    | FLOAT     |<Float, -∞<x<∞> OR -        |`GERP`_ identifies constrained elements in multiple alignments by           |
+|GERP               | FLOAT     |<Float, -∞<x<∞> OR -        |`GERP`_ identifies constrained elements in multiple alignments by           |
 |                   |           |                            | quantifying substitution deficits.                                         |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |LRT                | FLOAT     |<Float, 0-1> OR -           |`LRT`_ Using a comparative genomics data set of 32 vertebrate species we    |
@@ -200,34 +218,53 @@ Longer description:
 |PhyloP             | FLOAT     |<Float, 0-1 > OR -          |`Phylop`_ is another score for conservation.                                |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HPA Main_Location  | String    |':'-separated string        |`HPA`_ gives information of where the protein is most abundant              |
+|HPA Main Location  | String    |':'-separated string        |`HPA`_ gives information of where the protein is most abundant              |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |HPA Other Location | String    |':'-separated string        |Information where the proein is also found.                                 |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HPA Expression_type| String    |';'-separated string        |Information of the kind of expression.                                      |
+|HPA Expression Type| String    |';'-separated string        |Information of the kind of expression.                                      |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HPA_reliability    | String    |':'-separated string        |Estimation of the `HPA`_ prediction                                         |
+|HPA Reliability    | String    |':'-separated string        |Estimation of the `HPA`_ prediction                                         |
 |                   |           |[Very low, Low, Medium, ...]|                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|Gwas_catalog       | String    |Name=<Phenotype> OR -       |Describes associated phenotype from the `gwas` catalog, if existing.        |
+|Gwas Catalog       | String    |Name=<Phenotype> OR -       |Describes associated phenotype from the `gwas` catalog, if existing.        |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Transfac           | String    |Score=<INT>;Name=<Str> OR - |Description from the `Transfac`_ (Transcription Factor Binding Sites)       |
 |                   |           |                            |database.                                                                   |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|snoRNA & miRNA_    | String    |Name=<Str> OR -             |Annotation for RNA:s                                                        |
-|annotations        |           |                            |                                                                            |
+|snoRNA & miRNA     | String    |Name=<Str> OR -             |Annotation for RNA:s                                                        |
+|Annotations        |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|IDN 52-1-4A   _    | String    |':'-separated string        |Information of the genotype call.                                           |
+|GT Call Filter     | String    |[PASS,PRES]                 |Information of the filter from the genotype call process.                   |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|GT call filter     | String    |[PASS,PRES]                 |Information of the filter from the genotype call process.                   |
+|IDN 52-1-4A        | String    |':'-separated string        |Information of the genotype call.                                           |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|HBVDB         _    | Float     |<Float>                     |Local variation database.                                                   |
+|Inheritance Model  | STRING    |':'-separated string        |Variant Inheritance Pattern                                                 |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Rank Score         | INT       |Positive Integer            |Rank score according to patogenic potential                                 |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+
+
+Clinical List Additional Entries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|   COLUMN_NAME     |     TYPE  |          VALUE             |     DESCRIPTION                                                            |
++===================+===========+============================+============================================================================+
+|Disease_group      | String    |Peroxisomal metabolism      |Information on the type of disease                                          |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|DbIEM_genome_build | String    |GRCh37.p8                   |Genome version used in clinical Db                                          |
+|                   |           |                            |                                                                            |
++-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
+|Disease_gene_model | String    |AR_hom:AR_Compound:AD       |Known Disease Inheritance Model                                             |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 

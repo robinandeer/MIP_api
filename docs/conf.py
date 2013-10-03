@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'MIP_api'
-copyright = u'2013, Måns Magnusson, Robin Andeer'
+copyright = u'2013, Henrik Stranneheim, Måns Magnusson, Robin Andeer'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
