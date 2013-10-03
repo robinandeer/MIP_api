@@ -14,13 +14,14 @@ Here will follow a documentation of the different file formats, and also maybe t
 Contents:
 
 .. toctree::
-  :maxdepth: 2
-  
-  structure
-  annotated_file
-  installation
-  setup
-  adding-new-programs
+   :maxdepth: 2
+   
+   installation
+   setup
+   adding-new-programs
+   intersectCollect
+   annotated_file
+   
 
 
 

@@ -6,7 +6,7 @@ Moving files from INBOX
 FASTQ-files should be moved from `/INBOX` to a backed up directory.
 
 1. Check the pedigree file and move to a backed up directory ("exomes")
-2. Move and rename gzipped FASTQ-files into ``{SEQ TYPE}/{IDN}/fastq``
+2. Move and rename gzipped FASTQ-files into ``{SEQ TYPE}/{IDN}/fastq``, where IDN is your sample ID.
 
 Filename convention
 ~~~~~~~~~~~~~~~~~~~~~
@@ -16,7 +16,7 @@ The permanent filename should follow the following format::
 
 Dependencies
 ~~~~~~~~~~~~~~
-Make sure you have loaded/installed all dependencies and that they are in your PATH.
+Make sure you have loaded/installed all dependencies and that they are in your PATH. You only need to load the dependencies that are required for the modules that you want to run. If you fail to install dependencies for a module MIP will tell you what dependencies you need to install and exit.
 
 On UPPMAX::
 
