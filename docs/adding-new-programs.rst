@@ -34,18 +34,11 @@ This subroutine takes a number of input parameters. There are basically three pa
 
   DefineParameters("chanjoCutoff", "program", 10, 10, "pChanjo", 0)
 
-.. csv-table:: DefineParameters - paramaters
-  :header: "Parameter", "Example", "Description"
-  :widths: 1, 2, 3
 
-  "Name", "pChanjo", "Program names start with `p` by convention, otherwise it's up to you."
-  "Type", "program", "Can be either `program` or `path`."
-  "Default", 1, "**program**: 1/0 as on/off, **file**: path to file or `nodefault`, **attribute**: e.g 10 or `nodefault`"
-  "Uppmax default", 1, "See `Default`."
-  "Associated program", "MIP", "Typically the program that calls this program. **program**: usually `MIP`, **file/attribute**: `<Name>`."
-  "Exists check", 0, "Perform a check that a file is in the reference directory. Either: 0 or 'file'."
-  "File ending", "nofileEnding", "File ending when module is finished. MIP uses this to determine input files downstream in the `Chain`. **file/attribute**: skip."
-  "Chain", "MAIN", "The chain to which the program belongs to. **file/attribute**: skip."
+.. csv-table:: DefineParameters - parameters
+  :header-rows: 1
+  :widths: 1, 2, 3
+  :file: tables/define-parameters.csv
 
 .. note::
 
@@ -91,10 +84,18 @@ Later in your code when you would like to access those values you would join on 
 
 if-block run checker
 ---------------------
-The if-block has a number of uses. First it should check whether the program has been set to run:
+The if-block checks whether the program is set to run but it has a number of additional responsibilities.
+
+Perhaps the most important is to define dependencies. This is done by placing your if-statement after the closest upsteam process to yours. Chanjo, for example, needs to wait until `PicardToolsMarkDuplicates` has finished processing the BAM-files before running.
 
 .. code-block:: perl
+  
+  # Closest upsteam dependency for Chanjo
+  if ($scriptParameter{'pPicardToolsMarkduplicates'} > 0) {
+    # Body...
+  }
 
+  # This is where Chanjo fits!
   if ($scriptParameter{'pChanjo'} > 0) {
     # Body...
   }
@@ -103,8 +104,7 @@ Next (inside the if-block) it should print an announcement to two file handles:
 
 .. code-block:: perl
 
-  my announcement = "\nChanjo\n"  # Keeping it dry :)
-  print STDOUT announcement; print MIPLOGG announcement;
+  for my $fh (STDOUT, MIPLOGG) { print $fh "\nChanjo\n"; }
 
 Lastly it should call the custom subroutine, e.g. for each individual sample:
 
