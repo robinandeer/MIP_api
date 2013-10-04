@@ -1,9 +1,9 @@
-Stucture
+Structure
 =======================================
 
 mip.pl
 ---------------------------------------
-Central hub and likely the only script users will ever interact directly with.
+Central hub and likely the only script most users will ever interact directly with.
 
 .. code-block:: console
   
@@ -12,20 +12,16 @@ Central hub and likely the only script users will ever interact directly with.
 
 intersectCollect.pl
 ---------------------------------------
-Intersects and collects information based on 1-4 keys present (mandatory) in each file to be investigated...
+Intersects and collects information from external databases and merges all to one annotated variant file. (see :doc:`intersectCollect`). 
 
-
-mip_align.pl
----------------------------------------
-
-mip_variation.pl
----------------------------------------
 
 rank_list_filter.pl
 ---------------------------------------
-
+Scores and ranks each variant using weighted sums according to disease causing potential. 
+  
 collect_info.pl
 ---------------------------------------
+Collects QC data from the MPS analysis. Outputs in tab-sep format. 
 
 add_depth.pl
 ---------------------------------------
