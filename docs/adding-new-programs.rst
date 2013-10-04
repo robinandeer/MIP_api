@@ -40,10 +40,6 @@ This subroutine takes a number of input parameters. There are basically three pa
   :widths: 1, 2, 3
   :file: tables/define-parameters.csv
 
-.. note::
-
-  A 10th parameter will be added and represent the actual program handle which is used to check if the program is installed before running MIP.
-
 .. _get-options:
 
 Command line arguments in `GetOptions`
