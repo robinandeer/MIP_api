@@ -176,11 +176,17 @@ If you depend on earlier scripts to generate infile(s) for the new program it's 
 
   my $infileEnding = $sampleInfo{ $familyID }{ $sampleID }{'pPicardToolsMarkduplicates'}{'fileEnding'};
 
-``$sampleInfo`` is a hash table in global scope. [HENRIK EXPLAINS SWITCH]
+``$sampleInfo`` is a hash table in global scope.
+
+`MIP` supports... [HENRIK EXPLAINS SWITCH]
 
 .. code-block:: perl
 
   my ($infile, $mergeSwitch) = CheckIfMergedFiles($sampleID);
+
+.. note::
+
+  ``$infilesLaneNoEnding`` is a global hash table containing information about the filename-bases (compare filename-endings).
 
 c) Build SBATCH body
 ~~~~~~~~~~~~~~~~~~~~~
@@ -216,13 +222,22 @@ This subroutine is responsible for actually submitting the SBATCH script and han
     FIDSubmitJob($sampleID, $familyID, 2, $parameter{'pChanjo'}{'chain'}, $filename, 0);
   }
 
+.. csv-table:: FIDSubmitJob - paramaters
+  :header-rows: 1
+  :widths: 1, 2, 3
+  :file: tables/fid-submit-job.csv
+
 To figure out which option (integer) to supply as the third argument to `FIDSubmitJob` you can take a look at this illustration.
 
 .. image:: _static/FIDsubmit.png
 
 .. note::
 
-  ``$filename`` is a global variable that gets set in `ProgramPreRequisites`. It points to your freshly composed SBATCH script and should be supplied to `FIDSubmitJob` by all custom subroutines.
+  ``$filename`` is a variable that is created in `ProgramPreRequisites`. It points to your freshly composed SBATCH script file and should be supplied to `FIDSubmitJob` by all custom subroutines.
+
+.. note::
+
+  ``$parameter{'pChanjo'}{'chain'}`` is just the chain that you set in `DefineParameters`. In this case we could've replaced it with "MAIN".
 
 Further information
 --------------------

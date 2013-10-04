@@ -1,0 +1,7 @@
+Parameter,Example,Description
+Sample ID, 11-1-1A, "The sample ID/person IDN"
+Family ID, 11, "The family ID"
+Dependency type, 2, "Choose between type 0-4 (see below)"
+Chain key, $parameter{'pChanjo'}{'chain'}, "The chain defined in `DefineParameters`"
+SBATCH filename, ``$filename``, "Always use this variable. It automagically points to your SBATCH script file."
+Script tracker, 0, "Huh? Something about parallel processes..."
