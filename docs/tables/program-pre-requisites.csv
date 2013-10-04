@@ -1,0 +1,8 @@
+Parameter, Example, Description
+Directory, 11-1-1A, "Either a sample ID (e.g. IDN) or family ID depending on where output is stored."
+Program, chanjo, "Used in SBATCH script filename."
+Program directory, ``$aligner/coverageReport``, "Defines output directory under `Directory`. Path should include current aligner by convention."
+Call type, 0, "Options: `SNV`, `INDEL` or `BOTH`. Can be set to: 0 ???"
+File handle, ``*CHANJO``, "The program specific file handle which will be written to when generating the SBATCH script. Always prepend: '*'."
+Cores, 1, "The number of cores to allocate."
+Process time, 1.5, "An estimate of the runtime for the particular sample in hours."

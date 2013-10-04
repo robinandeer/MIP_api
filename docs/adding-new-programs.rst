@@ -80,7 +80,7 @@ Later in your code when you would like to access those values you would join on 
 
 if-block run checker
 ---------------------
-The if-block checks whether the program is set to run but it has a number of additional responsibilities.
+The if-block checks whether the program is set to run but it also has a number of additional responsibilities.
 
 Perhaps the most important is to define dependencies. This is done by placing your if-statement after the closest upsteam process to yours. Chanjo, for example, needs to wait until `PicardToolsMarkDuplicates` has finished processing the BAM-files before running.
 
@@ -102,7 +102,7 @@ Next (inside the if-block) it should print an announcement to two file handles:
 
   for my $fh (STDOUT, MIPLOGG) { print $fh "\nChanjo\n"; }
 
-Lastly it should call the custom subroutine, e.g. for each individual sample:
+Lastly it should call a :ref:`custom-sub`, e.g. for each individual sample:
 
 .. code-block:: perl
 
@@ -128,13 +128,6 @@ Lastly it should call the custom subroutine, e.g. for each individual sample:
 
 Custom subroutine
 ------------------
-To keep `mip.pl` clean it might be helpful to write the custom subroutine as a separate Perl file and subsequently "require" it into `mip.pl`.
-
-.. code-block:: perl
-  
-  # At the top of 'mip.pl' after 'use'-imports
-  require "chanjo.pl";
-
 First up, let's choose a relevant (and conflict free) name for our subroutine.
 
 .. code-block:: perl
@@ -143,7 +136,7 @@ First up, let's choose a relevant (and conflict free) name for our subroutine.
     # Body...
   }
 
-We should pass ALL nessesary variables into the subroutine and assign them as scoped variables.
+If we pass ALL nessesary variables into the subroutine and assign them as scoped variables it's easy to overview variables used inside.
 
 .. code-block:: perl
 
@@ -152,8 +145,8 @@ We should pass ALL nessesary variables into the subroutine and assign them as sc
   my $aligner = $_[2];
   # etc ...
 
-SBATCH headers
-~~~~~~~~~~~~~~~~
+a) SBATCH headers
+~~~~~~~~~~~~~~~~~~
 SBATCH headers are written by the `ProgramPreRequisites` subroutine. It takes a number of input arguments.
 
 .. code-block:: perl
@@ -161,19 +154,12 @@ SBATCH headers are written by the `ProgramPreRequisites` subroutine. It takes a 
   ProgramPreRequisites($sampleID, "chanjo", "$aligner/coverageReport", 0, *CHANJO, 1, $runtimeEst);
 
 .. csv-table:: ProgramPreRequisites - paramaters
-  :header: "Parameter", "Example", "Description"
+  :header-rows: 1
   :widths: 1, 2, 3
+  :file: tables/program-pre-requisites.csv
 
-  "Directory", "11-1-1A", "Either a sample ID (e.g. IDN) or family ID depending on where output is stored."
-  "Program", "chanjo", "Used in SBATCH script filename."
-  "Program directory", "``$aligner/coverageReport``", "Defines output directory under `Directory`. Path should include current aligner by convention."
-  "Call type", 0, "Options: `SNV`, `INDEL` or `BOTH`. Can be set to: 0 ???"
-  "File handle", ``*CHANJO``, "The program specific file handle which will be written to when generating the SBATCH script. Always prepend: '*'."
-  "Cores", 1, "The number of cores to allocate."
-  "Process time", 1.5, "An estimate of the runtime for the particular sample in hours."
-
-Figure out i/o files
-~~~~~~~~~~~~~~~~~~~~~
+b) Figure out i/o files
+~~~~~~~~~~~~~~~~~~~~~~~~
 It's up to you to figure out where your program should store output files. Basically you need to ask yourself whether putting them in the family/sample foler makes the most sense.
 
 It's a good idea to first specify both in- and output directories.
@@ -196,8 +182,8 @@ If you depend on earlier scripts to generate infile(s) for the new program it's 
 
   my ($infile, $mergeSwitch) = CheckIfMergedFiles($sampleID);
 
-Build SBATCH body
-~~~~~~~~~~~~~~~~~~
+c) Build SBATCH body
+~~~~~~~~~~~~~~~~~~~~~
 This is where you fit relevant parameters into your command line tool interface. Print everything to the file handle you defined above.
 
 .. code-block:: perl
@@ -219,8 +205,8 @@ This is where you fit relevant parameters into your command line tool interface.
 
   A ``wait`` command should be added after submitting multiple processes in the same SBATCH script with the ``&`` command. This will ensure SLURM waits for all processes to finish before quitting on the job.
 
-Call `FIDSubmitJob`
-~~~~~~~~~~~~~~~~~~~~
+d) Call `FIDSubmitJob`
+~~~~~~~~~~~~~~~~~~~~~~~
 This subroutine is responsible for actually submitting the SBATCH script and handling dependencies. You should only call this if the program is supposed to run for real (not dry run).
 
 .. code-block:: perl
