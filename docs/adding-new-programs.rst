@@ -71,6 +71,18 @@ You should replace anything that looks like ``<placeholder>``:
 
 Again, program options begin with a leading "p" by convention. Make sure you don't cause any naming conflicts.
 
+Lists can also be specified with a special syntax. Basically you need to assign the option to an array instead of ``$scriptParameters``.
+
+.. code-block:: perl
+
+  'ifd|inFilesDirs:s'  => \@inFilesDirs, #Comma separated list
+
+Later in your code when you would like to access those values you would join on ",".
+
+.. code-block:: perl
+
+  @inFilesDirs = join(',', @inFilesDirs);
+
 .. note::
 
   MIP doesn't use True/False flags, all options take at least one argument. For program options it's possible to turn on (1), off (0) and run programs in dry mode (2). All program options should specify "n(umber)" as argument type.
