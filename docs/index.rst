@@ -16,6 +16,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
+   MIP_overview
    installation
    setup
    adding-new-programs
