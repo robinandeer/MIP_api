@@ -24,7 +24,8 @@ Contents:
    structure
    intersectCollect
    annotated_file
-   
+   pedigree_file
+   IDN
 
 
 

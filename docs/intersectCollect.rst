@@ -49,3 +49,7 @@ Explanation
 #. Matching = range (3-4 keys) or exact (1-4 keys).
 #. Columns to collect = The columns number that are to be collected (1..N). Entry is comma-separated.
 #. File size = Small (read whole database to RAM) or large (handle database one chromosome at a time). 
+
+.. csv-table:: intersectCollect Parameters
+  :header-rows: 1
+  :file: intersectCollect_parameters.csv

@@ -31,7 +31,7 @@ MIP will only require prerequisites when processing a modules that has dependenc
 
 Meta-Data
 
-- Pedigree file (`PLINK`_-format)
+- Pedigree file (`PLINK`_-format; See :doc:`pedigree_file`)
 - Master template files for intersectCollect.pl (See :doc:`intersectCollect`).
 
 Usage
@@ -122,9 +122,18 @@ The ``-projectID`` flag sets the account to which allocate the core hours in SLU
 MIP currently supports two aligners `Mosaik`_ and `BWA`_, but supports any aligner that outputs BAM files. 
 Follow the instructions in :doc:`adding-new-programs` to add your own favorite aligner.  
 
-.. csv-table:: MIP Arguments
+**Pipeline WorkFlow**
+
+This is an example of a workflow that MIP can perform (used @CMMS).
+
+.. image:: MIP_workflow.png
+    :width: 700px
+    :align: left
+    :height: 500px
+.. csv-table:: MIP Parameters
   :header-rows: 1
-  :file: MIP_flags.csv
+  :widths: 2, 1, 1, 3
+  :file: MIP_parameters.csv
 
 .. _PLINK: http://pngu.mgh.harvard.edu/~purcell/plink/data.shtml
 .. _Mosaik: https://github.com/wanpinglee/MOSAIK

@@ -62,7 +62,7 @@ Moving files from INBOX
 ~~~~~~~~~~~~~~~~~~~~~~~
 FASTQ-files should be moved from `/INBOX` to a backed up directory.
 
-1. Check the pedigree file and move to a backed up directory ("exomes")
+1. Check the :doc:`pedigree_file` and move to a backed up directory ("exomes")
 2. Move and rename gzipped FASTQ-files into ``{SEQ TYPE}/{IDN}/fastq``, where IDN is your sample ID.
 
 
