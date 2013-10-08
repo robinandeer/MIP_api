@@ -16,4 +16,4 @@ Installation
   
   cpanm YAML
 
-4. You need to make sure all depedencies are installed and loaded. The most obscure program is: `qaTools <https://github.com/CosteaPaul/qaTools>`_. Start by downloading `samtools` v.0.1.18. qaTools needs this to build. Therefore you need to edit the `Makefile` in the qaTools directory to point to the `samtools`directory before running ``make``.
+4. You need to make sure all depedencies are installed and loaded (See :doc:`setup`). The most obscure program is: `qaTools <https://github.com/CosteaPaul/qaTools>`_. Start by downloading `samtools` v.0.1.18. qaTools needs this to build. Therefore you need to edit the `Makefile` in the qaTools directory to point to the `samtools`directory before running ``make``.

@@ -12,12 +12,10 @@ The pedigree file format is defined by `PLINK`_, although we currently only supp
 The first row should start with a “#” and contain relevant headers separated by tabs describing each column.
 The first six columns are mandatory. The named and order of the headers should be:
 
-#. FamilyID
-#. SampleID	
-#. Father
-#. Mother	
-#. Sex (1=male, 2=female, other=unknown)
-#. Phenotype (-9=missing, 0=missing, 1=unaffected, 2=affected )
+.. csv-table:: Mandatory Columns
+  :header-rows: 1
+  :file: pedigree_file_mandatory_columns.csv
+
 
 In addition to these mandatory columns we use the pedigree file to record meta data on each individual.
 Entries within each column should be separated with “;”and entered in consecutive order.  
@@ -34,24 +32,10 @@ On UPPMAX
 
 The pedigree file should named: FDN_pedigree.txt.
 
-Additional columns in the pedigree file:
+.. csv-table:: Additional columns in the pedigree file
+  :header-rows: 1
+  :file: pedigree_file_optional_columns.csv
 
-- CMMSID
-- Tissue_origin	
-- Isolation_kit	
-- Isolation_date
-- Isolation_personnel
-- Medical_Doctor
-- Inheritance_model
-- Phenotype_terms
-- CMMS_SeqID
-- SciLifeID
-- Capture_kit
-- Capture_date
-- Capture_personnel
-- Clustering_date
-- Sequencing_kit
-- Clinical_Db
 
 **Supported capture kits**::
 

@@ -11,7 +11,7 @@ Dependencies
 ~~~~~~~~~~~~~~
 Make sure you have loaded/installed all dependencies and that they are in your PATH. You only need to load the dependencies that are required for the modules that you want to run. If you fail to install dependencies for a module MIP will tell you what dependencies you need to install and exit.
 
-Program/Modules
+**Program/Modules**
 
 - Perl `YAML.pm`_ module, since this is not included in the perl standard
   distribution (if you want to supply config files to MIP)
@@ -63,7 +63,7 @@ Moving files from INBOX
 FASTQ-files should be moved from `/INBOX` to a backed up directory.
 
 1. Check the :doc:`pedigree_file` and move to a backed up directory ("exomes")
-2. Move and rename gzipped FASTQ-files into ``{SEQ TYPE}/{IDN}/fastq``, where IDN is your sample ID.
+2. Move and rename gzipped FASTQ-files into ``{SEQ TYPE}/{IDN}/fastq``, where :doc:`IDN` is your sample ID.
 
 
 EnvironmentUppmax flag
