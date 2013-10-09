@@ -3,6 +3,13 @@
 Annotated File
 ===============================
 
+Column conventions
+--------------------------------
+
+- Column names should start with Capital letter, rest of following words are in lower-case letters.
+- If a column name includes several words they should be combined by '_'.
+- If values are lists they should allways be separated by ':'
+
 Short description:
 --------------------------------
 .. csv-table:: Short description
