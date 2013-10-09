@@ -2,17 +2,30 @@
 
 Annotated File
 ===============================
+The Annotated file contains meta-information lines, a header line and then data lines each 
+containing information on a position in the genome. 
 
-Column conventions
---------------------------------
+Meta-information
+----------------
 
-- Column names should start with Capital letter, rest of following words are in lower-case letters.
-- If a column name includes several words they should be combined by '_'.
-- If values are lists they should allways be separated by ':'
+Format::
 
-Short description:
---------------------------------
-.. csv-table:: Short description
+##{COLUMN NAME}={String},{VERSION}={String},{DESCRIPTION}={String},{dDBNAME}={String}
+
+File meta-information is included after the ``##`` string and must be *key=value* pairs.
+
+Header lines
+------------
+
+Format::
+
+#{COLUMN NAME}\t{COLUMN NAME}\t...{COLUMN NAME}
+
+Below is a description of the current data line annotation information used at CMMS. 
+
+Short description
+~~~~~~~~~~~~~~~~~
+.. csv-table::
   :header-rows: 1
   :widths: 1, 4
   :file: mip-output.csv
@@ -25,14 +38,14 @@ Clinical List Additional Entries
 +==================================================+===========================================================================+
 |Disease_group                                     |Peroxisomal metabolism                                                     |                                          
 +--------------------------------------------------+---------------------------------------------------------------------------+
-|DbIEM_genome_build                                |GRCh37.p8                                                                  |
+|Clinical_db_genome_build                          |GRCh37.p8                                                                  |
 +--------------------------------------------------+---------------------------------------------------------------------------+
 |Disease_gene_model                                |AR_hom:AR_Compound:AD:                                                     |
 +--------------------------------------------------+---------------------------------------------------------------------------+
                                                                                                                                
-Longer description:
-------------------------------------------
-.. csv-table:: Long description
+Longer description
+~~~~~~~~~~~~~~~~~~
+.. csv-table::
   :header-rows: 1
   :widths: 1, 1, 2, 4
   :file: mip-output-long.csv
@@ -43,11 +56,11 @@ Clinical List Additional Entries
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |   COLUMN_NAME     |     TYPE  |          VALUE             |     DESCRIPTION                                                            |
 +===================+===========+============================+============================================================================+
-|Disease_group      | String    |Peroxisomal metabolism      |Information on the type of disease                                          |
+|Disease group      | String    |Peroxisomal metabolism      |Information on the type of disease                                          |
 |                   |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
-|DbIEM_genome_build | String    |GRCh37.p8                   |Genome version used in clinical Db                                          |
-|                   |           |                            |                                                                            |
+|Clinical db genome | String    |GRCh37.p8                   |Genome version used in clinical Db                                          |
+|build              |           |                            |                                                                            |
 +-------------------+-----------+----------------------------+----------------------------------------------------------------------------+
 |Disease_gene_model | String    |AR_hom:AR_Compound:AD       |Known Disease Inheritance Model                                             |
 |                   |           |                            |                                                                            |

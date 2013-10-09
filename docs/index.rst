@@ -17,13 +17,15 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
+   MIP_overview
    installation
    setup
    adding-new-programs
    structure
    intersectCollect
    annotated_file
-   
+   pedigree_file
+   IDN
 
 
 

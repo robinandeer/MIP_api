@@ -7,7 +7,9 @@ The db files are supplied using the ``-db`` flag, which should point to a databa
 ``{DATABASE PATH}\t{SEPARATOR}\t{COLUMN KEYS}\t{CHROMOSOME COLUMN}\t{MATCHING}\t{COLUMNS TO COLLECT}\t{FILE SIZE}``
 
 NOTE: that matching should be either range or exact. Currently the range option only supports 3-4 keys i.e. only 3 keys are used to define the range look up (preferbly chromosome,start,stop). 
-Range db file should be sorted -k1,1 -k2,2n if it contains chromosome information. If the merge option is used then all overlapping and unique elements are added to the final list. 
+Range db file should be sorted -k1,1 -k2,2n if it contains chromosome information. 
+
+If the merge option is used then all overlapping and unique elements are added to the final list. 
 Beware that this option is memory demanding.
 
 IntersectCollect requires a tab-separated plain text file (the database master file) describing:
@@ -34,7 +36,7 @@ SetUp
 
 Database Master File
 ~~~~~~~~~~~~~~~~~~~~
-* Line 1: ``outinfo:Header1=>{DATABASE NR IN FILE}_{COLUMN IN DATABASE},..,HeaderN``
+* Line 1: ``outinfo:ColumnName=>{DATABASE LINE NR IN FILE}_{COLUMN IN DATABASE AT LINE NR IN FILE},..,ColumnNameN``
 * Line 2: ``{DATABASE PATH}\t{SEPARATOR}\t{COLUMN KEYS}\t{CHROMOSOME COLUMN}\t{MATCHING}\t{COLUMNS TO COLLECT}\t{FILE SIZE}``
 	\.
 	
@@ -49,3 +51,7 @@ Explanation
 #. Matching = range (3-4 keys) or exact (1-4 keys).
 #. Columns to collect = The columns number that are to be collected (1..N). Entry is comma-separated.
 #. File size = Small (read whole database to RAM) or large (handle database one chromosome at a time). 
+
+.. csv-table:: intersectCollect Parameters
+  :header-rows: 1
+  :file: intersectCollect_parameters.csv
