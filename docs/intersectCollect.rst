@@ -4,10 +4,13 @@ Intersects and collects information (in any order) based on 1-4 keys present (ma
 The set of elements to be interrogated are decided by the first db file elements unless the merge option is used.
 The db files are supplied using the ``-db`` flag, which should point to a database master file (tab-sep) with the format:
 
-``{DATABASE PATH}\t{SEPARATOR}\t{COLUMN KEYS}\t{CHROMOSOME COLUMN}\t{MATCHING}\t{COLUMNS TO COLLECT}\t{FILE SIZE}``
+.. code-block:: console
 
-NOTE: that matching should be either range or exact. Currently the range option only supports 3-4 keys i.e. only 3 keys are used to define the range look up (preferbly chromosome,start,stop). 
-Range db file should be sorted -k1,1 -k2,2n if it contains chromosome information. 
+  {DATABASE PATH}\t{SEPARATOR}\t{COLUMN KEYS}\t{CHROMOSOME COLUMN}\t{MATCHING}\t{COLUMNS TO COLLECT}\t{FILE SIZE}
+
+.. note::
+
+  That matching should be either range or exact. Currently the range option only supports 3-4 keys i.e. only 3 keys are used to define the range look up (preferbly chromosome,start,stop). Range db file should be sorted ``-k1,1 -k2,2n`` if it contains chromosome information. 
 
 If the merge option is used then all overlapping and unique elements are added to the final list. 
 Beware that this option is memory demanding.

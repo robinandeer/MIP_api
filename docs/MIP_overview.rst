@@ -24,13 +24,16 @@ Installation
 MIP is written in Perl and therfore requires that Perl is installed on your OS (See :doc:`installation`).
 
 Prerequisites
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
+.. todo::
 
-MIP will only require prerequisites when processing a modules that has dependencies (See :doc:`setup`). 
+  Mention something about SLURM dependency
+
+MIP will only require prerequisites when processing a modules that has dependencies (See :doc:`setup`).
 
 
 Meta-Data
-
+^^^^^^^^^^
 - Pedigree file (`PLINK`_-format; See :doc:`pedigree_file`)
 - Master template files for intersectCollect.pl (See :doc:`intersectCollect`).
 
@@ -49,7 +52,7 @@ run mode and MIP will create sbatch scripts, but not submit them to SLURM for th
 can be restarted from any module, but you need to supply previous dependent
 programs in dry run mode to ensure proper file handling. 
 
-MIP will overwrite data files when reanalyzing, but versions and keeps all sbatch scripts for tracability.
+MIP will overwrite data files when reanalyzing, but keeps all "versioned" sbatch scripts for traceability.
 
 MIP allows individual target file calculations if supplied with a pedigree file
 containing the supported capture kits.
@@ -59,11 +62,13 @@ defaults.
 
 **Example usage:**
 
-``perl mip.pl -f 3 -sampleid 3-1-1A,3-2-1U -sampleid 3-2-2U -pFQC 0 -pMosaikBuild 2 -pMosaikAlign 2 -c 3_config.yaml``
+.. code-block:: console
 
-This will analyse family 3 using three individuals from that family and begin the
-analysis with programs after MosaikAlign and use all parameter values as
-specified in the config file, except those supplied on the command line, which
+  $ perl mip.pl -f 3 -sampleid 3-1-1A,3-2-1U -sampleid 3-2-2U -pFQC 0 -pMosaikBuild 2 -pMosaikAlign 2 -c 3_config.yaml
+
+This will analyze *family 3* using *three individuals* from that family and begin the
+analysis with programs *after MosaikAlign* and use all parameter values as
+specified in the *config file*, except those supplied on the command line, which
 has precedence.
 
 **Input**
@@ -86,8 +91,7 @@ should be located in *annovar/humandb*.
 
 **Output**
 
-Analyses done per individual is found under respective sampleID and analyses
-done including all samples can be found under the family directory
+Analyses done per individual is found under respective sampleID subdirectory and analyses done including all samples can be found under the family directory.
 
 **Sbatch Scripts**
 
@@ -100,8 +104,8 @@ and will not be overwritten if you begin a new analysis.
 
 MIP will place any generated datafiles in the output data directory specified by
 ``-outDataDir``. All datatfiles are regenerated for each analysis. *STDOUT* and
-*STDERR* for each program is written in the *program/info* directory prior to
-alignment and in the *aligner/info* directory post alignment.
+*STDERR* for each program is written in the *<program>/info* directory prior to
+alignment and in the *<aligner>/info* directory post alignment.
 
 **Analysis Types**
 
@@ -111,16 +115,16 @@ the ``-bwamemrdb`` flag.
 
 .. note::
 
-   In rapid mode Sort and index is done for each batch of reads in the BWA_Mem call, since the link to infile is broken by the read batch processing. However pSamToolsSort should be enabled to ensure correct fileending and merge the flow to ordinary modules.
+   In rapid mode; Sort and index is done for each batch of reads in the ``BWA_Mem`` call, since the link to infile is broken by the read batch processing. However ``pSamToolsSort`` should be enabled to ensure correct fileending and merge the flow to ordinary modules.
 
 **Project ID**
 
-The ``-projectID`` flag sets the account to which allocate the core hours in SLURM. 
+The ``-projectID`` flag sets the account to which core hours will be allocated in SLURM.
 
 **Aligner**
 
-MIP currently supports two aligners `Mosaik`_ and `BWA`_, but supports any aligner that outputs BAM files. 
-Follow the instructions in :doc:`adding-new-programs` to add your own favorite aligner.  
+Currently MIP officially supports two aligners `Mosaik`_ and `BWA`_, but technically supports any aligner that outputs BAM files. 
+Follow the instructions in :doc:`adding-new-programs` to add your own favorite aligner.
 
 **Pipeline WorkFlow**
 
@@ -130,10 +134,14 @@ This is an example of a workflow that MIP can perform (used @CMMS).
     :width: 700px
     :align: left
     :height: 500px
+
+
 .. csv-table:: MIP Parameters
   :header-rows: 1
   :widths: 2, 1, 1, 3
   :file: MIP_parameters.csv
+
+\* outDataDir/familyID/aligner/GATK/candidates/ranking/familyID_orphan.selectVariants, outDataDir/familyID/aligner/GATK/candidates/ranking/clinical/familyID.selectVariants
 
 .. _PLINK: http://pngu.mgh.harvard.edu/~purcell/plink/data.shtml
 .. _Mosaik: https://github.com/wanpinglee/MOSAIK

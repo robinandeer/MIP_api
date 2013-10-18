@@ -55,8 +55,8 @@ You should replace anything that looks like ``<placeholder>``:
 .. code-block:: perl
   
   'pCh|pChanjo:n' => \$parameter{'pChanjo'}{'value'},  # Chanjo coverage analysis
-   'chStore|chanjoStore:s' => \$parameter{'chanjoStore'}{'value'},  # Central SQLite database path
-   'chCut|chanjoCutoff:n' => \$parameter{'chanjoCutoff'}{'value'},  # Cutoff used for completeness
+  'chStore|chanjoStore:s' => \$parameter{'chanjoStore'}{'value'},  # Central SQLite database path
+  'chCut|chanjoCutoff:n' => \$parameter{'chanjoCutoff'}{'value'},  # Cutoff used for completeness
 
 Again, program options begin with a leading "p" by convention. Make sure you don't cause any naming conflicts.
 

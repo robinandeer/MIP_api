@@ -5,7 +5,7 @@ Installation
 
   On UNIX, Perl5 can be installed by following these `instructions <http://learn.perl.org/installing/unix_linux.html>`_. It uses `Perlbrew <http://perlbrew.pl/>`_.
 
-2. To switch to the new Perl installation, you might need to run
+2. To switch to the new Perl installation, you might need to run:
 
   .. code-block:: console
     
@@ -16,6 +16,7 @@ Installation
 
   .. code-block:: console
     
+    cpanm <dependency>
     $ cpanm YAML
 
 4. Dependencies
@@ -28,7 +29,7 @@ Installation
 
   .. code-block:: console
     
-    Clone the official git repository
+    clone the official git repository
     $ git clone https://github.com/henrikstranneheim/MIP.git
     $ cd MIP
 

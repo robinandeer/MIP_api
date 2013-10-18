@@ -7,7 +7,7 @@ Central hub and likely the only script most users will ever interact directly wi
 
 .. code-block:: console
   
-  echo "Running MIP on Uppmax, analyzing all samples in family 10"
+  $ echo "Running MIP on Uppmax, analyzing all samples in family 10"
   $ perl mip.pl -env_up 1 -f 10
 
 Sequence QC
@@ -60,7 +60,7 @@ Scores and ranks each variant using weighted sums according to disease causing p
   
 collect_info.pl
 ---------------------------------------
-Collects QC data from the MPS analysis. Outputs in tab-sep format. 
+Collects QC data from the MPS analysis. Outputs in tab-separated format. 
 
 add_depth.pl
 ---------------------------------------

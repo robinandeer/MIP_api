@@ -5,7 +5,7 @@ Ensure that each individual are anonymized and unique. The IDN also facilitates 
 of all operations and analyses performed upon the individual.
 
 .. note::
- Changes to the IDN format should be recorded in this document.
+ Changes to the IDN format will be recorded in this document.
 
 IDN Definition
 -------------- 
